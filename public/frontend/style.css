@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+.container{
+    width:80%;
+    margin:auto;
+}
+
+:root{
+    --primary-color:#5b82d7 ;
+    --hover-color:#4076ea ;
+    --secondary-color:#16a149;
+    --light-color:#707172;
+}
+
+.hero-section{
+
+    background-image: linear-gradient(to right,rgba(74, 74, 209, 0.409),rgba(207, 96, 96, 0.402)),url(image/skill\ bg.jpg);
+    background-size:cover;
+    height:100vh;
+
+}
+
+.primary-heading{
+ line-height:0.9;
+}
+
+.btn-hire{
+    background-color:#9fa0a0;
+}
+.btn-hire:hover{
+    background-color: #4f5051;
+}
