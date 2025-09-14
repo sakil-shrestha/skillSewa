@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->id();
+            $table->string('faculty');
+            $table->foreignId('professional_id')->constrained()->cascadeOnDelete();
+            $table->enum('level', ['primary', 'secondary', 'higher']);
+            $table->string('years_of_experience');
+            $table->json('skills');
             $table->timestamps();
         });
     }

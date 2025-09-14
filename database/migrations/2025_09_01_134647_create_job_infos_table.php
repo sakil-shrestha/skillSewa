@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('job_infos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('professional_id')->constrained()->cascadeOnDelete();
             $table->string('job_title');
             $table->string('hourly_rate');
             $table->longText('description');

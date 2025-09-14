@@ -19,14 +19,17 @@ class ProfessionalResource extends Resource
 {
     protected static ?string $model = Professional::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
+
+    protected static ?string $modelLabel = "Manage Professional";
+    protected static ?string $pluralModelLabel = 'Manage Professional';
 
     protected static ?string $recordTitleAttribute = 'Professional';
 
-    // public static function canCreate(): bool
-    // {
-    //     return Professional::count() == 0 ? true : false;
-    // }
+    public static function canCreate(): bool
+    {
+        return Professional::count() == 0 ? true : false;
+    }
 
     public static function form(Schema $schema): Schema
     {

@@ -4,6 +4,8 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -26,6 +28,21 @@ class Professional extends Authenticatable
         'profile',
         'dob'
     ];
+
+
+    public function educations(): HasMany
+    {
+        return $this->hasMany(Education::class);
+    }
+    public function portfolio(): HasMany
+    {
+        return $this->hasMany(Portfolio::class);
+    }
+
+    public function jobInfo(): BelongsTo
+    {
+        return $this->belongsTo(JobInfo::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
