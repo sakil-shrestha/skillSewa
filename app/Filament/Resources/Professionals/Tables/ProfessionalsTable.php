@@ -48,17 +48,17 @@ class ProfessionalsTable
                             'rejected' => 'rejected',
                         ]),
 
-                    TextColumn::make('dob')
-                        ->date()
-                        ->sortable(),
-                    TextColumn::make('created_at')
-                        ->dateTime()
-                        ->sortable()
-                        ->toggleable(isToggledHiddenByDefault: true),
-                    TextColumn::make('updated_at')
-                        ->dateTime()
-                        ->sortable()
-                        ->toggleable(isToggledHiddenByDefault: true),
+                    // TextColumn::make('dob')
+                    //     ->date()
+                    //     ->sortable(),
+                    // TextColumn::make('created_at')
+                    //     ->dateTime()
+                    //     ->sortable()
+                    //     ->toggleable(isToggledHiddenByDefault: true),
+                    // TextColumn::make('updated_at')
+                    //     ->dateTime()
+                    //     ->sortable()
+                    //     ->toggleable(isToggledHiddenByDefault: true),
                 ])
 
                     ->space(2)

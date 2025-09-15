@@ -6,6 +6,7 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class ProfessionalForm
@@ -16,10 +17,9 @@ class ProfessionalForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                TextInput::make('password')
-                    ->password()
-                    ->hiddenOn('edit')
-                    ->required(),
+                // TextInput::make('password')
+                //     ->password()
+                //     ->required(),
                 TextInput::make('email')
                     ->label('Email address')
                     ->email()
@@ -30,8 +30,9 @@ class ProfessionalForm
                     ->default(null),
                 FileUpload::make('profile')
                     ->default(null),
+                Toggle::make('is_available')
+                    ->required(),
                 Select::make('status')
-                    ->hiddenOn('edit')
                     ->options(['pending' => 'Pending', 'approved' => 'Approved', 'rejected' => 'Rejected'])
                     ->default('pending')
                     ->required(),

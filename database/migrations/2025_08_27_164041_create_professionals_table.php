@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('contact')->nullable();
             $table->string('address')->nullable();
             $table->string('profile')->nullable();
+            $table->boolean('is_available')->default(0);
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->date('dob')->nullable();
             $table->string('remember_token')->nullable();

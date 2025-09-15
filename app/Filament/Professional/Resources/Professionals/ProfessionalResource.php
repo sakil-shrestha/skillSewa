@@ -16,20 +16,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 
-//for professional panel
 class ProfessionalResource extends Resource
 {
     protected static ?string $model = Professional::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
-    protected static ?string $modelLabel = "Info";
-    protected static ?string $pluralModelLabel = 'Info';
-
-    // euta professional ko data haru arko professional ma show huna na dina ko lagi yo function use gareko
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()->where('id', Auth::guard('professional')->user()->id);
-    }
 
     public static function form(Schema $schema): Schema
     {
@@ -47,13 +38,10 @@ class ProfessionalResource extends Resource
             //
         ];
     }
-
-
-
-    // public static function canCreate(): bool
-    // {
-    //     return false;
-    // }
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->where('id', Auth::guard('professional')->user()->id);
+    }
 
     public static function getPages(): array
     {

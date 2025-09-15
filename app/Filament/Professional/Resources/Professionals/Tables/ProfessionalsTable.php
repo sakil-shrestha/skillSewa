@@ -5,11 +5,11 @@ namespace App\Filament\Professional\Resources\Professionals\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-//for professional panel
 class ProfessionalsTable
 {
     public static function configure(Table $table): Table
@@ -20,14 +20,14 @@ class ProfessionalsTable
                     ->searchable(),
                 TextColumn::make('email')
                     ->label('Email address')
-                    ->copyable()
                     ->searchable(),
                 TextColumn::make('contact')
-                    ->copyable()
                     ->searchable(),
                 TextColumn::make('address')
                     ->searchable(),
                 ImageColumn::make('profile'),
+                IconColumn::make('is_available')
+                    ->boolean(),
                 TextColumn::make('status'),
                 TextColumn::make('dob')
                     ->date()
