@@ -15,17 +15,19 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
+use UnitEnum;
 
 class PortfolioResource extends Resource
 {
     protected static ?string $model = Portfolio::class;
+    protected static string | UnitEnum | null $navigationGroup = 'Settings';
 
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()->where('professional_id', Auth::guard('professional')->user()->id);
     }
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Square3Stack3d;
 
     public static function form(Schema $schema): Schema
     {

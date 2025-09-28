@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('professional_id')->constrained()->cascadeOnDelete();
             $table->dateTime('start_time');
             $table->dateTime('end_time')->nullable(); // Optional, if bookings have duration
-            $table->enum('status', ['pending', 'confirmed', 'completed', 'cancelled'])->default('pending');
+            $table->enum('status', ['confirmed', 'completed', 'cancelled'])->default('confirmed');
             $table->text('notes')->nullable(); // Optional notes from user
             $table->timestamps();
         });

@@ -15,12 +15,14 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
+use UnitEnum;
 
 class JobInfoResource extends Resource
 {
     protected static ?string $model = JobInfo::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Briefcase;
+    protected static string | UnitEnum | null $navigationGroup = 'Settings';
 
     public static function getEloquentQuery(): Builder
     {

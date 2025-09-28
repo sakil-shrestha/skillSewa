@@ -13,3 +13,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'home'])->name('frontend.home');
 Route::post('/professional-request', [PageController::class, 'professional_request'])->name('frontend.professionalRequest');
 Route::get('/professional-detail/{id}', [ProfessionalCardController::class, 'card_detail'])->name('professional.detail');
+Route::get('/book/{id}', [PageController::class, 'book'])->name('book');

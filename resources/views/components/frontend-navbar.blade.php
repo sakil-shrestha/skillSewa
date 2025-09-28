@@ -11,13 +11,16 @@
 
         </div>
         <div class="flex gap-8">
-            <a href="#"
+            <a href="admin"
                 class="py-1.5 px-4 rounded-xl hover:bg-[var(--hover-color)] hover:text-white transition-all font-medium">Admin</a>
-            <a href="#"
-                class="py-1.5 font-medium px-4 rounded-xl hover:bg-[var(--hover-color)] hover:text-white transition-all">Login</a>
-            <a href="#"
-                class="font-medium text-white bg-[var(--primary-color)] py-2 px-4 rounded-xl hover:bg-[var(--hover-color)] transition-all">Get
-                Started</a>
+            <a href="professional"
+                class="py-1.5 font-medium px-4 rounded-xl hover:bg-[var(--hover-color)] hover:text-white transition-all">
+                Professional
+                login</a>
+            <a href="user"
+                class="font-medium text-white bg-[var(--primary-color)] py-2 px-4 rounded-xl hover:bg-[var(--hover-color)] transition-all transform hover:scale-105">Login
+                for user
+            </a>
         </div>
     </nav>
 </header>

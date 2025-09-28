@@ -10,7 +10,7 @@
 
 <body class="bg-gray-100 font-sans">
     <div class="container mx-auto px-4 py-8">
-        {{ asset(Storage::url($professional->profile)) }}
+
         <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
             <div class="flex flex-col md:flex-row items-center gap-6">
                 <img src="{{ asset(Storage::url($professional->profile)) }}" alt="Profile"
@@ -18,9 +18,7 @@
                 <div class="flex-1 text-center md:text-left">
                     <h1 class="text-3xl font-bold text-gray-800">{{ $professional->name }}</h1>
 
-                    {{-- @foreach ($jobInfo as $job)
-                        <p class="text-gray-600 mt-2">{{ $job->job_title }}</p>
-                    @endforeach --}}
+
 
                     <p class="text-gray-500">Status: <span
                             class="text-green-500 font-semibold">{{ $professional->status }}</span></p>
@@ -31,9 +29,10 @@
                     <p class="text-gray-500">Contact: {{ $professional->contact }}</p>
                     <p class="text-gray-500">Address: {{ $professional->address }} </p>
                 </div>
-                <button
+
+                <a href="{{ route('book', $professional->id) }}"
                     class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Book
-                    Now</button>
+                    Now</a>
             </div>
         </div>
 

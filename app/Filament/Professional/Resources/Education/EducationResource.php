@@ -16,13 +16,14 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
+use UnitEnum;
 
 class EducationResource extends Resource
 {
     protected static ?string $model = Education::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
-
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::AcademicCap;
+    protected static string | UnitEnum | null $navigationGroup = 'Settings';
 
 
 
