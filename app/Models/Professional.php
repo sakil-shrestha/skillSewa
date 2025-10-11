@@ -40,9 +40,9 @@ class Professional extends Authenticatable
         return $this->hasMany(Portfolio::class);
     }
 
-    public function jobInfo(): BelongsTo
+    public function jobInfos(): HasMany
     {
-        return $this->belongsTo(JobInfo::class);
+        return $this->hasMany(JobInfo::class, 'professional_id');
     }
 
     public function bookings()

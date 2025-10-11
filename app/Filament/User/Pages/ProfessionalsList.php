@@ -2,6 +2,7 @@
 
 namespace App\Filament\User\Pages;
 
+use App\Models\JobInfo;
 use App\Models\Professional;
 use BackedEnum;
 use Filament\Pages\Page;
@@ -14,13 +15,12 @@ class ProfessionalsList extends Page
 
     // protected static string $view = 'filament.pages.professionals-list';
 
-    public $professionals, $job;
+    public $professionals;
 
     public function mount(): void
     {
 
-        $this->professionals = Professional::where('status', 'approved')->with('jobInfo')->get();
-        // $this->job = Professional::where('status', 'approved')->with('jobInfo')->get();
+        $this->professionals = Professional::where('status', 'approved')->with('jobInfos')->get();
     }
 
     // protected function getHeader(): ?\Illuminate\Contracts\View\View
