@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    {{-- @include('sweetalert::alert') --}}
+    @include('sweetalert::alert')
     {{-- header --}}
     <x-frontend-navbar />
 

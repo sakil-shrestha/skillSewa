@@ -26,7 +26,8 @@ class Professional extends Authenticatable
         'contact',
         'address',
         'profile',
-        'dob'
+        'dob',
+
     ];
 
 

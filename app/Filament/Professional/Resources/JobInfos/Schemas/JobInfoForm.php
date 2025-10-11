@@ -16,6 +16,7 @@ class JobInfoForm
                 TextInput::make('job_title')
                     ->required(),
                 TextInput::make('hourly_rate')
+                    ->prefix('Rs.')
                     ->required(),
                 RichEditor::make('description')
                     ->required()

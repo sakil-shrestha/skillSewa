@@ -6,12 +6,14 @@ use App\Mail\BookingNotification;
 use App\Mail\ProfessionalRequest;
 use App\Models\Admin;
 use App\Models\Booking;
+use App\Models\JobInfo;
 use App\Models\Professional;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PageController extends Controller
 {
@@ -44,17 +46,19 @@ class PageController extends Controller
     public function book($id)
     {
         $book = new Booking();
+        $rate = JobInfo::where('professional_id', $id)->value('hourly_rate');
         $book->user_id = Auth::user()->id;
         $book->professional_id = $id;
         $book->start_time = Carbon::parse(now());
         $book->end_time = $book->start_time->copy()->addHours(48);
         $book->status = 'confirmed';
         $book->save();
+        Alert::toast('booking successful', 'success');
 
         // $email = Professional::pluck('email')->toArray();
         $email = $book->professional->email;
         Mail::to($email)->send(new BookingNotification($book));
 
-        return redirect()->route('filament.user.pages.professionals-list');
+        return view('payment.page', compact('book', 'rate'));
     }
 }

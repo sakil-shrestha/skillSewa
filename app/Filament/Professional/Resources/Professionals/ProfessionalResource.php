@@ -25,6 +25,9 @@ class ProfessionalResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::User;
     protected static string | UnitEnum | null $navigationGroup = 'Settings';
 
+    protected static ?string $modelLabel = "Bio";
+    protected static ?string $pluralModelLabel = 'Bio';
+
     public static function form(Schema $schema): Schema
     {
         return ProfessionalForm::configure($schema);

@@ -18,11 +18,12 @@ class JobInfosTable
                 TextColumn::make('job_title')
                     ->searchable(),
                 TextColumn::make('hourly_rate')
+                    ->prefix('Rs ')
                     ->searchable(),
                 TextColumn::make('description')
-                    ->limit(50)
-                    // ->html()
-                    ->formatStateUsing(fn(string $state): HtmlString => new HtmlString($state))
+                    ->limit(5)
+                    ->html()
+                    // ->formatStateUsing(fn(string $state): HtmlString => new HtmlString($state))
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

@@ -14,11 +14,13 @@ class ProfessionalsList extends Page
 
     // protected static string $view = 'filament.pages.professionals-list';
 
-    public $professionals;
+    public $professionals, $job;
 
     public function mount(): void
     {
-        $this->professionals = Professional::where('status', 'approved')->get();
+
+        $this->professionals = Professional::where('status', 'approved')->with('jobInfo')->get();
+        // $this->job = Professional::where('status', 'approved')->with('jobInfo')->get();
     }
 
     // protected function getHeader(): ?\Illuminate\Contracts\View\View
