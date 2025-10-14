@@ -34,3 +34,52 @@
 .btn-hire:hover{
     background-color: #4f5051;
 }
+
+/* css for card section */
+.professional-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.professional-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.book-btn {
+    background: linear-gradient(135deg, #e63946, #ff5f6d);
+    transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+    background: linear-gradient(135deg, #ff5f6d, #e63946);
+    transform: scale(1.05);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #e63946 !important;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #ff5f6d !important;
+    transform: scale(1.15);
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

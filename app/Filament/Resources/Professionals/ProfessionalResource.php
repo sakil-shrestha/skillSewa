@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 //for admin panel
 class ProfessionalResource extends Resource
@@ -23,6 +24,7 @@ class ProfessionalResource extends Resource
 
     protected static ?string $modelLabel = "Manage Professional";
     protected static ?string $pluralModelLabel = 'Manage Professional';
+    protected static string| UnitEnum | null $navigationGroup = 'Main';
 
     protected static ?string $recordTitleAttribute = 'Professional';
 

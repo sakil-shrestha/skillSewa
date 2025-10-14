@@ -1,6 +1,4 @@
 <x-filament::page>
-
-    {{ dd($professionals) }}
     <div class="professional-card-container">
         @foreach ($professionals as $professional)
             <div class="custom-professional-card">
@@ -64,7 +62,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.8rem;
+            gap: 1.5rem;
             padding: 2rem;
         }
 
@@ -79,29 +77,29 @@
         /* --- CARD BODY --- */
         .custom-professional-card .grid-card {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
+            grid-template-columns: 1fr 1.2fr;
             grid-template-rows: repeat(4, auto);
-            gap: 0.8rem;
+            gap: 0.6rem;
             background: #ffffff;
-            border-radius: 1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            padding: 1rem;
-            width: 28rem;
+            border-radius: 0.9rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 0.8rem;
+            width: 22rem;
             transition: all 0.3s ease;
         }
 
         .custom-professional-card .grid-card:hover {
             transform: scale(1.04);
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
         }
 
         /* --- IMAGE --- */
         .custom-professional-card .professional__card--image {
             border: 2px solid rgb(68, 68, 223);
             grid-row: 1 / span 3;
-            height: 8rem;
-            width: 8rem;
+            height: 6.5rem;
+            width: 6.5rem;
             border-radius: 50%;
             object-fit: cover;
             justify-self: center;
@@ -116,20 +114,20 @@
 
         .custom-professional-card .company-name h2 {
             text-transform: uppercase;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: #1e293b;
         }
 
         .custom-professional-card .company-name p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #475569;
         }
 
         /* --- STATUS --- */
         .custom-professional-card .card-status {
             text-align: right;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #018f43;
         }
 
@@ -148,47 +146,47 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
+            gap: 0.5rem;
         }
 
         .custom-professional-card .card-info ul li {
-            font-size: 1rem;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
         }
 
         /* --- BUTTON AREA --- */
         .custom-professional-card .btn-details {
             align-self: end;
             text-align: center;
-            margin-top: 0.5rem;
+            margin-top: 0.4rem;
         }
 
         .custom-professional-card .view-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.5rem;
+            gap: 0.4rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 2rem;
             border: none;
             background: linear-gradient(90deg, #163ba0, #4b5dff);
             color: #ffffff;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
             text-decoration: none;
-            box-shadow: 0 3px 10px rgba(68, 68, 223, 0.3);
+            box-shadow: 0 3px 8px rgba(68, 68, 223, 0.3);
             transition: all 0.3s ease;
         }
 
         .custom-professional-card .view-btn:hover {
             background: linear-gradient(90deg, #1e46b3, #5c6cf7);
             transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 6px 15px rgba(68, 68, 223, 0.4);
+            box-shadow: 0 6px 14px rgba(68, 68, 223, 0.4);
         }
 
         .custom-professional-card .view-btn i {
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         /* --- RESPONSIVE --- */

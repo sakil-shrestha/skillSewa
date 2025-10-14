@@ -20,54 +20,44 @@ class ProfessionalsTable
     {
         return $table
             ->columns([
-                // Grid::make([
-                //     'default' => 1,
-                //     'sm' => 2,
-                //     'md' => 3,
-                //     'lg' => 4,
-                // ])
-                // ->schema([
-                Stack::make([
-                    ImageColumn::make('profile')
-                        ->circular()
-                        ->grow(false)
-                        ->extraImgAttributes(['class' => 'h-32 w-32 object-cover rounded-lg']),
-                    TextColumn::make('name')
-                        ->searchable(),
-                    TextColumn::make('email')
-                        ->label('Email address')
-                        ->searchable(),
-                    TextColumn::make('contact')
-                        ->searchable(),
-                    TextColumn::make('address')
-                        ->searchable(),
-                    SelectColumn::make('status')
-                        ->options([
-                            'pending' => 'pending',
-                            'approved' => 'approved',
-                            'rejected' => 'rejected',
-                        ]),
 
-                    // TextColumn::make('dob')
-                    //     ->date()
-                    //     ->sortable(),
-                    // TextColumn::make('created_at')
-                    //     ->dateTime()
-                    //     ->sortable()
-                    //     ->toggleable(isToggledHiddenByDefault: true),
-                    // TextColumn::make('updated_at')
-                    //     ->dateTime()
-                    //     ->sortable()
-                    //     ->toggleable(isToggledHiddenByDefault: true),
-                ])
 
-                    ->space(2)
-                    ->extraAttributes(['class' => 'bg-white p-4 rounded-lg shadow']),
+                TextColumn::make('name')
+                    ->searchable(),
+                TextColumn::make('email')
+                    ->label('Email address')
+                    ->searchable(),
+                TextColumn::make('contact')
+                    ->searchable(),
+                TextColumn::make('address')
+                    ->searchable(),
+                ImageColumn::make('profile')
+                    ->circular()
+                    ->grow(false)
+                    ->extraImgAttributes(['class' => 'h-32 w-32 object-cover rounded-lg']),
+                SelectColumn::make('status')
+                    ->options([
+                        'pending' => 'pending',
+                        'approved' => 'approved',
+                        'rejected' => 'rejected',
+                    ]),
             ])
-            ->contentGrid([
-                'md' => 2,
-                'xl' => 3,
-            ])
+            // TextColumn::make('dob')
+            //     ->date()
+            //     ->sortable(),
+            // TextColumn::make('created_at')
+            //     ->dateTime()
+            //     ->sortable()
+            //     ->toggleable(isToggledHiddenByDefault: true),
+            // TextColumn::make('updated_at')
+            //     ->dateTime()
+            //     ->sortable()
+            //     ->toggleable(isToggledHiddenByDefault: true),
+
+
+
+
+
 
             // ])
             ->filters([

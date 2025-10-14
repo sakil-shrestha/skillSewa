@@ -32,10 +32,10 @@ class ProfessionalForm
                     ->default(null),
                 Toggle::make('is_available')
                     ->required(),
-                Select::make('status')
-                    ->options(['pending' => 'Pending', 'approved' => 'Approved', 'rejected' => 'Rejected'])
-                    ->default('pending')
-                    ->required(),
+                // Select::make('status')
+                //     ->options(['pending' => 'Pending', 'approved' => 'Approved', 'rejected' => 'Rejected'])
+                //     ->default('pending')
+                //     ->required(),
                 DatePicker::make('dob'),
             ]);
     }

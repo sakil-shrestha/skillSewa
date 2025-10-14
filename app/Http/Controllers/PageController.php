@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Frontend\BaseController;
 use App\Mail\BookingNotification;
 use App\Mail\ProfessionalRequest;
 use App\Models\Admin;
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class PageController extends Controller
+class PageController extends BaseController
 {
     public function home()
     {
@@ -53,7 +54,6 @@ class PageController extends Controller
         $book->end_time = $book->start_time->copy()->addHours(48);
         $book->status = 'confirmed';
         $book->save();
-        Alert::toast('booking successful', 'success');
 
         // $email = Professional::pluck('email')->toArray();
         $email = $book->professional->email;

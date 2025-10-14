@@ -29,7 +29,7 @@ class ProfessionalPanelProvider extends PanelProvider
             ->id('professional')
             ->path('professional')
             ->login()
-            ->registration()
+
             ->passwordReset()
             ->profile()
             // ->resources([
@@ -46,8 +46,8 @@ class ProfessionalPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Professional/Widgets'), for: 'App\Filament\Professional\Widgets')
             ->widgets([
-                AccountWidget::class,
-                FilamentInfoWidget::class,
+                // AccountWidget::class,
+                // FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

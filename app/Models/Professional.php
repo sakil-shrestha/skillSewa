@@ -50,6 +50,11 @@ class Professional extends Authenticatable
         return $this->hasMany(Booking::class);
     }
 
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

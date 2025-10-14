@@ -7,11 +7,13 @@ use App\Models\Professional;
 use BackedEnum;
 use Filament\Pages\Page;
 use Filament\Support\Icons\Heroicon;
+use UnitEnum;
 
 class ProfessionalsList extends Page
 {
     protected string $view = 'filament.user.pages.professionals-list';
     protected static string|BackedEnum|null $navigationIcon = Heroicon::BuildingOffice;
+    protected static string| UnitEnum | null $navigationGroup = 'Main';
 
     // protected static string $view = 'filament.pages.professionals-list';
 
