@@ -29,6 +29,7 @@ class UserPanelProvider extends PanelProvider
             ->login()
             ->profile()
             ->registration()
+
             ->colors([
                 'primary' => Color::Amber,
             ])
