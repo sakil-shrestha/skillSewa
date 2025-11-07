@@ -1,68 +1,29 @@
-{{-- <form action="{{ route('frontend.professionalRequest') }}" class="max-w-sm mx-auto" method="POST">
-        @csrf
-
-        <div class="mb-5">
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your name</label>
-            <input type="text" id="name" name="name"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="name" required />
-
-
-        </div>
-
-        <div class="mb-5">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                email</label>
-            <input type="email" id="email" name="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="name@flowbite.com" required />
-        </div>
-
-
-        <div class="mb-5">
-            <label for="contact" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                contact</label>
-            <input type="text" id="contact" name="contact"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required />
-            @error('contact')
-                <span class="text-red-500">{{ $message }}</span>
-            @enderror
-        </div>
-
-
-        <button type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send
-            Request</button>
-    </form> --}}
 
 <x-frontend-layout>
 
-    <!-- hero section -->
+    {{-- <!-- hero section -->
     <section class="hero-section">
 
         <div class="container flex justify-center">
             <div class="flex flex-col items-center text-center w-5/6 text-white ">
-                <h1 class="primary-heading text-[78px] font-medium justify-center mb-12 mt-24 ">Connect Skills
+                <h1 class="primary-heading text-[64px] font-medium justify-center mb-12 mt-24 ">Connect Skills
                     with Opportunities</h1>
 
-                <h3 class="text-2xl mb-8">The premier platform where IT professionals showcase their expertise
+                <h3 class="text-xl mb-10">The premier platform where IT professionals showcase their expertise
                     and companies discover exceptional talent. Your next career move or perfect hire is just a
                     click away.</h3>
 
-                <div class="mb-8 flex gap-4">
-                    {{-- <a href="#"
+                <div class="mb-10 flex gap-4">
+                    <a href="#"
                         class="font-medium text-white bg-[var(--primary-color)] py-2 px-4 rounded-xl hover:bg-[var(--hover-color)] transition-all">I'm
-                        Professional</a> --}}
+                        Professional</a>
                     <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
                         class="font-medium text-white bg-[var(--primary-color)] py-2 px-4 rounded-xl hover:bg-[var(--hover-color)] transition-all transform hover:scale-105"
                         type="button">
                         I'm Professional
                     </button>
 
-                    <a href="#"
-                        class=" btn-hire font-medium text-white  py-2 px-4 rounded-xl transition-all transform hover:scale-105">I'm
-                        Hiring</a>
+
                 </div>
 
                 <div class="flex gap-8 items-center text-md">
@@ -149,6 +110,38 @@
             </div>
         </div>
 
+    </section> --}}
+
+
+
+
+     <section class="hero">
+      <div class="hero__overlay">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Connect Skills <br /> with Opportunities
+          </h1>
+          <p class="hero__subtitle">
+            The premier platform where skilled professionals showcase their expertise
+            and companies or organizations discover exceptional talent. Your next career move or
+            perfect hire is just a click away.
+          </p>
+          <div class="hero__stats">
+            <div class="stat">
+              <h2>3K+</h2>
+              <p>Skilled Professionals</p>
+            </div>
+            <div class="stat">
+              <h2>100+</h2>
+              <p>Companies</p>
+            </div>
+            <div class="stat">
+              <h2>95%</h2>
+              <p>Success Rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
 </x-frontend-layout>

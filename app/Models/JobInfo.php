@@ -10,7 +10,7 @@ class JobInfo extends Model
     protected $fillable = [
         "job_title",
         "hourly_rate",
-        "description",
+        "description",  
         "professional_id"
     ];
     public function professional(): BelongsTo

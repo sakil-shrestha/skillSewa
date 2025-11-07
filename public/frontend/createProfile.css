@@ -1,0 +1,95 @@
+.create-profile {
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  background-color: #f9fbff;
+}
+
+.create-profile__welcome {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.create-profile__welcome h1 {
+  font-size: 2.5rem;
+  color: var(--blue-primary);
+  margin-bottom: 0.5rem;
+}
+
+.create-profile__welcome p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.create-profile__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.form-card h2 {
+  font-size: 1.4rem;
+  color: var(--blue-primary);
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 0.5px solid var(--blue-secondary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border: 2px solid var(--green-primary);
+  box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.1); /* optional soft glow */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn--blue {
+  background: linear-gradient(135deg, #1554c1, #4b95f1);
+
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+  /* margin-top: 2rem; */
+}
+
+.btn-widht {
+  width: 30%;
+}

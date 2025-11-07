@@ -1,0 +1,107 @@
+.footer {
+  background: linear-gradient(135deg, #00904c, #2e3192);
+  color: white;
+  padding: 2rem 5rem;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer__brand h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer__brand p {
+  color: #e0e0e0;
+}
+
+.footer__column h4,
+.footer__subscribe h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__column a:hover {
+  text-decoration: underline;
+}
+
+.footer__subscribe p {
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.footer__subscribe form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer__subscribe input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background-color: white;
+}
+
+.footer__subscribe button {
+  background-color: var(--green-primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer__bottom {
+  border-top: 1px solid #ffffff33;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.footer__contact span {
+  margin-right: 1rem;
+}
+
+.footer__legal {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer__legal a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__legal a:hover {
+  text-decoration: underline;
+}
+.navbar__logo img{
+    margin-bottom: 1.5rem;
+    width:12rem;
+}

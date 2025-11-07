@@ -24,7 +24,23 @@ Route::get('/khalti', [PaymentController::class, 'khalti']);
 // Route::middleware('auth')->group(function () {});
 
 Route::group(['prefix' => '/home', 'middleware' => 'auth'], function () {
+    // Route::get('/user/login', [HomeController::class, 'index'])->name('user.login');
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get('/professional-detail/{id}', [ProfessionalCardController::class, 'card_detail'])->name('professional.detail');
     Route::get('/book/{id}', [PageController::class, 'book'])->name('book');
+    Route::get('/professional-detail/{id}', [ProfessionalCardController::class, 'card_detail'])->name('professional.detail');
+
 });
+
+
+Route::fallback(function()
+{
+    return view('404');
+});
+
+
+Route::get('createProfile',[PageController::class,'createProfile'])->name('CreateProfile');
+Route::get('/about',[PageController::class,'about'])->name('frontend.about');
+Route::get('/aboutsection',[PageController::class,'aboutsection'])->name('aboutsection');
+Route::get('/contact',[PageController::class,'contact'])->name('frontend.contact');
+
+// Route::get('/search',[PageController::class,'search'])->name('professionals.search');

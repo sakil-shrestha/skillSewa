@@ -21,7 +21,6 @@ class ProfessionalsTable
         return $table
             ->columns([
 
-
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('email')
@@ -41,10 +40,10 @@ class ProfessionalsTable
                         'approved' => 'approved',
                         'rejected' => 'rejected',
                     ]),
+                    // TextColumn::make('dob')
+                    //     ->date()
+                    //     ->sortable(),
             ])
-            // TextColumn::make('dob')
-            //     ->date()
-            //     ->sortable(),
             // TextColumn::make('created_at')
             //     ->dateTime()
             //     ->sortable()
@@ -64,7 +63,7 @@ class ProfessionalsTable
                 //
             ])
             ->recordActions([
-                // EditAction::make(),
+                EditAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

@@ -30,6 +30,7 @@ class ProfessionalPanelProvider extends PanelProvider
             ->path('professional')
             ->login()
 
+
             ->passwordReset()
             ->profile()
             // ->resources([

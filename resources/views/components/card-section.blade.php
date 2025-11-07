@@ -57,6 +57,51 @@
             consultation.</p>
     </div>
 
+
+
+
+
+
+
+
+
+
+{{--
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    @forelse ($professionals as $pro)
+        <div class="bg-gray-800/30 p-5 rounded-xl text-center">
+            <img src="{{ $pro->profile ? asset('storage/' . $pro->profile) : 'https://via.placeholder.com/150' }}"
+                 alt="{{ $pro->name }}"
+                 class="w-24 h-24 mx-auto rounded-full object-cover mb-3">
+
+            <h3 class="text-white text-lg font-semibold capitalize">{{ $pro->name }}</h3>
+            <p class="text-gray-400 text-sm mb-1">{{ $pro->skill ?? 'No skill info' }}</p>
+            <p class="text-gray-400 text-sm mb-2">{{ $pro->city ?? 'Unknown City' }}</p>
+            <p class="text-indigo-400 font-semibold">${{ $pro->hourly_rate ?? 500 }}/hr</p>
+
+            <a href="{{ route('book', $pro->id) }}"
+               class="block mt-3 bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition">
+               Book Appointment
+            </a>
+        </div>
+    @empty
+        <p class="text-center text-gray-400 col-span-full">No professionals found for your criteria.</p>
+    @endforelse
+</div> --}}
+
+<!-- Pagination (if using paginate) -->
+{{-- <div class="mt-6">
+    {{ $professionals->links() }}
+</div> --}}
+
+
+
+
+
+
+
+
+
     <!-- Swiper Carousel -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">

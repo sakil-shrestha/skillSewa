@@ -1,4 +1,14 @@
 <x-filament::page>
+
+{{-- <div> --}}
+{{-- <h2>search for professional </h2> --}}
+    {{-- <form action="{{route('professionals.search')}}" method="get">
+        <input type="text" placeholder="search by job title" name="job_title">
+
+        <button type="submit">Search</button>
+
+    </form> --}}
+{{-- </div> --}}
     <div class="professional-card-container">
         @foreach ($professionals as $professional)
             <div class="custom-professional-card">
@@ -13,11 +23,11 @@
                         @endforeach
                     </div>
 
-                    <div class="card-status">
+                    {{-- <div class="card-status">
                         <span>{{ $professional->is_available ? 'Available' : 'Not Available' }}</span>
                         <i class="ri-checkbox-circle-fill"></i>
-                    </div>
-
+                    </div> --}}
+                    <div> </div>
                     <div class="card-info">
                         <ul>
                             <li>
@@ -61,9 +71,10 @@
         .professional-card-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            padding: 2rem;
+            /* justify-content: center; */
+            gap: 1rem;
+            padding: 2rem 0.5rem;
+            /* border:1px solid; */
         }
 
         /* --- CARD WRAPPER --- */
@@ -120,7 +131,7 @@
         }
 
         .custom-professional-card .company-name p {
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             color: #475569;
         }
 
